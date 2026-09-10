@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.rvschool'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // RestAssured for API testing
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'
+
+    // JSON parser for handling JSON responses
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // AssertJ for better assertions
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+}
+
+test {
+    useJUnitPlatform()
+}
