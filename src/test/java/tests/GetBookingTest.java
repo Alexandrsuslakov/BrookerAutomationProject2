@@ -19,7 +19,7 @@ public class GetBookingTest {
     private APIClient apiClient;
     private ObjectMapper objectMapper;
 
-    // Инициализация ФЗШ клиента перед каждым тестом
+    // Инициализация API клиента перед каждым тестом
     @BeforeEach
     public void setup() {
         apiClient = new APIClient();
